@@ -17,7 +17,7 @@
 
 import { useEffect, useRef, useState } from "react";
 
-export default function useReveal(options = {}) {
+export default function useReveal({ threshold = 0.15, root = null, rootMargin = "0px" } = {}) {
   const ref = useRef(null);
   const [shown, setShown] = useState(false);
 
@@ -31,11 +31,11 @@ export default function useReveal(options = {}) {
           obs.disconnect();
         }
       },
-      { threshold: 0.15, ...options }
+      { threshold, root, rootMargin }
     );
     obs.observe(el);
     return () => obs.disconnect();
-  }, []);
+  }, [root, rootMargin, threshold]);
 
   return { ref, shown };
 }
