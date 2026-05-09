@@ -20,7 +20,7 @@ function App() {
   return (
     <LanguageProvider>
       <div className="App">
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
           <Routes>
             <Route path="/" element={<Portfolio />} />
           </Routes>
