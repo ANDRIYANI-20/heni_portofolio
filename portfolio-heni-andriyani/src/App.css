@@ -1,0 +1,15 @@
+.App {
+  min-height: 100vh;
+  background: #F7F3ED;
+  color: #0B1F3A;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #F1ECE2; }
+::-webkit-scrollbar-thumb {
+  background: #B08A3E;
+  border-radius: 8px;
+  border: 2px solid #F1ECE2;
+}
+::-webkit-scrollbar-thumb:hover { background: #8a6a2c; }
